@@ -1,4 +1,4 @@
-FROM php:7.1-cli
+FROM php:7.2-cli
 
 LABEL maintainer="d@dmitri.io"
 
@@ -38,5 +38,3 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get update \
     && apt-get install -y yarn \
     && rm -r /var/lib/apt/lists/*
-
-ENV SYMFONY_PHPUNIT_VERSION=6.5

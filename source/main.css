@@ -16,13 +16,13 @@ body {
   .menu a {
     border-radius: 5px;
     padding: 5px;
-    background: #f9f9f9;
+    background: #eee;
     text-decoration: none; }
 
 .article-meta {
   border-radius: 5px;
   padding: 5px;
-  background: #f9f9f9;
+  background: #eee;
   text-align: center; }
 
 footer {
