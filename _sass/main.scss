@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+// Copied from: https://github.com/yihui/hugo-xmin/tree/master/static/css
+
+//
+// Variables
+//
+
+$font-main:    Optima, Candara, Calibri, Arial, sans-serif;
+$font-code:    "Lucida Console", Monaco, monospace;
+$background:   #f9f9f9;
+$border-color: #ddd;
+
+//
+// Mixins
+//
+
+@mixin focus-item {
+  border-radius: 5px;
+  padding: 5px;
+  background: $background;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  font-family: $font-main;
+  line-height: 1.5em;
+}
+
+//
+// Layout
+//
+
+.title {
+  font-size: 1.1em;
+}
+
+.menu {
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    @include focus-item();
+
+    text-decoration: none;
+  }
+}
+
+.article-meta {
+  @include focus-item();
+
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//
+// Content
+//
+
+main {
+  hyphens: auto;
+}
+img, iframe, video {
+  max-width: 100%;
+}
+hr {
+  border-style: dashed;
+  color: $border-color;
+}
+code {
+  background: $background;
+  font-family: $font-code;
+  font-size: 85%;
+}
+pre {
+  overflow-x: auto;
+  box-shadow: 5px 5px 5px #eee;
+  border: 1px solid $border-color;
+  padding: 1em;
+
+  code {
+    background: none;
+  }
+}
+blockquote {
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+  background: $background;
+}
+
+// Tables.
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+
+  thead {
+    background: #eee;
+
+    th {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+th, td {
+  padding: 5px;
+}
+tfoot, tr:nth-child(even) {
+  background: #eee;
+}
