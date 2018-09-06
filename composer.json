@@ -1,0 +1,7 @@
+{
+    "name": "devmachine/website",
+    "description": "Personal website.",
+    "require": {
+        "sculpin/sculpin": "^3.0@dev"
+    }
+}
