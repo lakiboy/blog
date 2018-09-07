@@ -6,7 +6,7 @@
 
     <title>{{ page.title }} | {{ site.title }}</title>
 
-    <link href="{{ site.url }}/main.css" rel="stylesheet" type="text/css">
+    <link href="/main.css" rel="stylesheet" type="text/css">
 
     {% block stylesheets %}{% endblock %}
 </head>
@@ -14,7 +14,7 @@
     <nav>
         <ul class="menu">
             {% for item in site.nav %}
-                <li><a href="{{ site.url ~ item.url }}">{{ item.title }}</a></li>
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
         </ul>
 
@@ -34,7 +34,7 @@
     <footer>
         <hr>
 
-        &copy; <a href="{{ site.link.website }}">{{ site.full_name }}</a> 2018 | <a href="{{ site.link.github }}">Github</a> | <a href="{{ site.link.twitter }}">Twitter</a>
+        &copy; <a href="{{ site.link.website }}">{{ site.author }}</a> 2018 | <a href="{{ site.link.github }}">Github</a> | <a href="{{ site.link.twitter }}">Twitter</a>
     </footer>
 </body>
 </html>

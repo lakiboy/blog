@@ -10,7 +10,7 @@ title: Categories
 {% spaceless %}
 <ul>
     {% for category, posts in data.posts_categories %}
-        <li><a href="{{ site.url }}/categories/{{ category | url_encode }}">{{ category }}</a> ({{ posts | length }})</li>
+        <li><a href="/categories/{{ category | url_encode }}">{{ category }}</a> ({{ posts | length }})</li>
     {% endfor %}
 </ul>
 {% endspaceless %}
