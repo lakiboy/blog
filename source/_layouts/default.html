@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
 
     <link href="/main.css" rel="stylesheet" type="text/css">
+    <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="{{ site.title }} activity feed">
 
     {% block stylesheets %}{% endblock %}
 </head>

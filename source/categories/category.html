@@ -1,0 +1,30 @@
+---
+layout: default
+header: false
+title: Category archive
+generator: [ posts_category_index, pagination ]
+pagination: { provider: page.category_posts }
+---
+
+{% set title -%}
+    Posts in {{ '"' ~ page.category ~ '"' }} category
+{%- endset %}
+
+{% block title -%}
+    {{ title }}
+{%- endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <ul>
+        {% for post in page.pagination.items %}
+            <li>
+                <span class="date">{{ post.date | date('d-m-Y') }}</span>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{# Add pagination #}
