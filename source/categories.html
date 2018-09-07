@@ -1,0 +1,16 @@
+---
+layout: default
+header: false
+use: [ posts_categories ]
+title: Categories
+---
+
+<h1>{{ page.title }}</h1>
+
+{% spaceless %}
+<ul>
+    {% for category, posts in data.posts_categories %}
+        <li><a href="{{ site.url }}/categories/{{ category | url_encode }}">{{ category }}</a> ({{ posts | length }})</li>
+    {% endfor %}
+</ul>
+{% endspaceless %}

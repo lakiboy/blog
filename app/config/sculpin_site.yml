@@ -1,5 +1,12 @@
 title: dmitri.io
 full_name: Dmitri Lakachauskis
+
+nav:
+    - { url: '/', title: 'Home' }
+    - { url: '/tags', title: 'Tags' }
+    - { url: '/categories', title: 'Categories' }
+    - { url: '/about', title: 'About' }
+
 link:
     website: 'https://dmitri.io'
     github:  'https://github.com/lakiboy'
