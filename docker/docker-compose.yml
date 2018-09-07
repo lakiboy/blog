@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+  php:
+    build: .
+    volumes:
+      - devmachine-website-sync:/app:nocopy
+    expose:
+      - 8000
+    command: ./vendor/bin/sculpin generate --server --watch
+    working_dir: /app
+    environment:
+      VIRTUAL_HOST: dmitri.docker
+      VIRTUAL_PORT: 8000
+
+volumes:
+  devmachine-website-sync:
+    external: true
