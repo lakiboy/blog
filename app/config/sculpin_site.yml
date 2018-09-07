@@ -1,7 +1,9 @@
 title: dmitri.io
 author: Dmitri Lakachauskis
-email: d@dmitri.io
-url: https://dmitri.io
+description: Blog about software development
+email: 'd@dmitri.io'
+url: 'https://dmitri.io'
+twitter: '@lakiboy'
 
 nav:
     - { url: '/', title: 'Home' }
