@@ -7,5 +7,5 @@ Source code of my website.
 Compile _Sass_:
 
 ```bash
-$ cd docker; docker-compose run php yarn css-build
+$ docker-compose run php yarn css-build
 ```

@@ -1,6 +1,6 @@
 {
-    "name": "devmachine/website",
-    "description": "Personal website.",
+    "name": "devmachine/blog",
+    "description": "Personal blog.",
     "require": {
         "sculpin/sculpin": "^3.0@dev"
     }

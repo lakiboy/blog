@@ -1,7 +1,7 @@
 version: "2"
 
 syncs:
-  devmachine-website-sync:
+  blog-sync:
     src: '.'
     sync_excludes: ['.git/', '.idea/', '.vagrant/', 'var/cache', 'var/log']
     sync_userid: '999'
