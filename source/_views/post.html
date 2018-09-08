@@ -1,1 +1,10 @@
 {% extends "default" %}
+
+{% block content_wrapper %}
+    <div class="article-meta">
+        <h1><span class="title">{{ page.title }}</span></h1>
+        <h2 class="date">{{ page.date | date('Y/m/d') }}</h2>
+    </div>
+
+    <main>{{ page.blocks.content|raw }}</main>
+{% endblock %}

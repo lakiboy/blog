@@ -1,6 +1,5 @@
 ---
 layout: default
-header: false
 title: Home
 ---
 

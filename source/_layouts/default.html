@@ -28,15 +28,17 @@
         <hr>
     </nav>
 
-    {% if page.header is not defined or page.header %}
-        <div class="article-meta">
-            <h1><span class="title">{{ page.title }}</span></h1>
+    {% block content_wrapper %}
+        {% if page.header | default(false) %}
+            <div class="article-meta">
+                <h1><span class="title">{{ page.title }}</span></h1>
 
-            {% if page.author %}<h2 class="author">{{ page.author }}</h2>{% endif %}
-        </div>
-    {% endif %}
+                {% if page.author %}<h2 class="author">{{ page.author }}</h2>{% endif %}
+            </div>
+        {% endif %}
 
-    <main>{% block content %}{% endblock %}</main>
+        <main>{% block content %}{% endblock %}</main>
+    {% endblock %}
 
     <footer>
         <hr>
