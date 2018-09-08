@@ -3,8 +3,41 @@
 {% block content_wrapper %}
     <div class="article-meta">
         <h1><span class="title">{{ page.title }}</span></h1>
-        <h2 class="date">{{ page.date | date('Y/m/d') }}</h2>
+        <h2 class="author">{{ site.author }} @ {{ page.date | date('Y/m/d') }}</h2>
     </div>
 
-    <main>{{ page.blocks.content|raw }}</main>
+    {# Content #}
+    <main>{{ page.blocks.content | raw }}</main>
+
+    {# Taxonomies #}
+    <p>
+        <em>Tags</em>:
+        {% for tag in page.tags -%}
+            <a href="/tags/{{ tag | url_encode }}">{{ tag }}</a>
+            {%- if not loop.last %}, {% endif %}
+        {%- endfor %}
+
+        <br>
+
+        <em>Categories</em>:
+        {% for category in page.categories -%}
+            <a href="/categories/{{ category | url_encode }}">{{ category }}</a>
+            {%- if not loop.last %}, {% endif %}
+        {%- endfor %}
+    </p>
+
+    {# Pagination #}
+    {% if page.previous_post or page.next_post %}
+        <hr>
+        <p>
+            {% if page.next_post %}
+                <em>Next</em>: <a href="{{ site.url ~ page.next_post.url }}">{{ page.next_post.title }}</a>
+                {% if page.previous_post %}<br>{% endif %}
+            {% endif %}
+
+            {% if page.previous_post %}
+                <em>Previous</em>: <a href="{{ site.url ~ page.previous_post.url }}">{{ page.previous_post.title }}</a>
+            {% endif %}
+        </p>
+    {% endif %}
 {% endblock %}
