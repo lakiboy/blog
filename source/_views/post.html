@@ -31,12 +31,12 @@
         <hr>
         <p>
             {% if page.next_post %}
-                <em>Next</em>: <a href="{{ site.url ~ page.next_post.url }}">{{ page.next_post.title }}</a>
+                <em>Next</em>: <a href="{{ page.next_post.url }}">{{ page.next_post.title }}</a>
                 {% if page.previous_post %}<br>{% endif %}
             {% endif %}
 
             {% if page.previous_post %}
-                <em>Previous</em>: <a href="{{ site.url ~ page.previous_post.url }}">{{ page.previous_post.title }}</a>
+                <em>Previous</em>: <a href="{{ page.previous_post.url }}">{{ page.previous_post.title }}</a>
             {% endif %}
         </p>
     {% endif %}
