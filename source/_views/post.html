@@ -1,5 +1,14 @@
 {% extends "default" %}
 
+{% block stylesheets %}
+    <link href="/highlight.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+
 {% block content_wrapper %}
     <div class="article-meta">
         <h1><span class="title">{{ page.title }}</span></h1>

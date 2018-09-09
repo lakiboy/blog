@@ -85,12 +85,13 @@ code {
   background: $bg-color-secondary;
   font-family: $font-code;
   font-size: 85%;
+  line-height: 1.25em;
 }
 pre {
   overflow-x: auto;
   box-shadow: 5px 5px 5px $bg-color-primary;
   border: 1px solid $border-color;
-  padding: 1em;
+  // padding: 1em;
 
   code {
     background: none;

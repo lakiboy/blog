@@ -40,13 +40,13 @@ hr {
 code {
   background: #f9f9f9;
   font-family: "Lucida Console", Monaco, monospace;
-  font-size: 85%; }
+  font-size: 85%;
+  line-height: 1.25em; }
 
 pre {
   overflow-x: auto;
   box-shadow: 5px 5px 5px #eee;
-  border: 1px solid #ddd;
-  padding: 1em; }
+  border: 1px solid #ddd; }
   pre code {
     background: none; }
 
