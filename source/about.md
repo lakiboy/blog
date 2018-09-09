@@ -10,7 +10,7 @@ My name is **Dmitri** (_Latvian_: Dmitrijs Lakačauskis) and I live in Riga the 
 
 I build software since 2004 using _PHP_, _Javascript_, _MySQL_ / _PostgreSQL_, _Redis_, _MongoDB_ and friends.
 
-I strive to be up to date with modern design techniques which includes but is not limited do:
+I strive to be up to date with modern design techniques which includes but is not limited to:
 design patterns, unit testing, clean code, _SOLID_ programming principles and domain-driven design.
 
 Social links:
@@ -19,7 +19,7 @@ Social links:
 - **Twitter** handle: <a href="{{ site.link.twitter }}">{{ site.twitter }}</a>
 - **Linkedin** profile: <a href="{{ site.link.linkedin }}">{{ site.link.linkedin }}</a>
 
-You can also write me an email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+You can write me an email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
 
 This blog is built with [Sculpin](https://sculpin.io) with theme ported from [Hugo](https://gohugo.io) [XMin](https://xmin.yihui.name).
 The source files are available on [Github](https://github.com/lakiboy/blog).
