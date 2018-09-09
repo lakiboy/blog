@@ -13,9 +13,10 @@ nav:
     - { url: '/atom.xml', title: 'Subscribe' }
 
 link:
-    website: 'https://dmitri.io'
-    github:  'https://github.com/lakiboy'
-    twitter: 'https://twitter.com/lakiboy'
+    website:  'https://dmitri.io'
+    github:   'https://github.com/lakiboy'
+    twitter:  'https://twitter.com/lakiboy'
+    linkedin: 'https://www.linkedin.com/in/lakiboy'
 
 #disqus:
 #    shortname:

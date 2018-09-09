@@ -71,9 +71,9 @@ footer {
 // Content
 //
 
-main {
-  hyphens: auto;
-}
+//main {
+//  hyphens: auto;
+//}
 img, iframe, video {
   max-width: 100%;
 }
@@ -121,4 +121,15 @@ th, td {
 }
 tfoot, tr:nth-child(even) {
   background: $bg-color-primary;
+}
+
+//
+// Pages
+//
+
+.avatar {
+  float: left;
+  margin: 0 15px 5px 0;
+  max-width: 25%;
+  min-width: 40px;
 }

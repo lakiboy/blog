@@ -30,9 +30,6 @@ footer {
   footer a {
     text-decoration: none; }
 
-main {
-  hyphens: auto; }
-
 img, iframe, video {
   max-width: 100%; }
 
@@ -72,3 +69,9 @@ th, td {
 
 tfoot, tr:nth-child(even) {
   background: #eee; }
+
+.avatar {
+  float: left;
+  margin: 0 15px 5px 0;
+  max-width: 25%;
+  min-width: 40px; }
