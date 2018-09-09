@@ -19,7 +19,7 @@ Social links:
 - **Twitter** handle: <a href="{{ site.link.twitter }}">{{ site.twitter }}</a>
 - **Linkedin** profile: <a href="{{ site.link.linkedin }}">{{ site.link.linkedin }}</a>
 
-You can write me an email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+You can write me an email at <a href="{{ site.email | obfuscate(true) }}">{{ site.email | obfuscate }}</a>.
 
 This blog is built with [Sculpin](https://sculpin.io) with theme ported from [Hugo](https://gohugo.io) [XMin](https://xmin.yihui.name).
 The source files are available on [Github](https://github.com/lakiboy/blog).
