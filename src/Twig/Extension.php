@@ -22,7 +22,7 @@ final class Extension extends Twig_Extension
         $result = '';
 
         for ($i = 0, $len = strlen($source); $i < $len; ++$i) {
-            $result .= '&#' . ord($source[$i]) . ';';
+            $result .= '&#x' . dechex(ord($source[$i])) . ';';
         }
 
         return $result;
