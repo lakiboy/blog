@@ -4,6 +4,12 @@ Source code of my blog.
 
 ## Installation
 
+Sync files:
+
+```bash
+$ docker-sync start
+```
+
 Install dependencies:
 
 ```bash
