@@ -3,6 +3,6 @@
     "node-sass": "^4.9.3"
   },
   "scripts": {
-    "css-build": "node-sass source/_sass/main.scss source/main.css"
+    "css-build": "node-sass assets/main.scss source/main.css"
   }
 }

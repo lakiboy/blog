@@ -1,6 +1,6 @@
 # dmitri.io
 
-Source code of my blog. It runs on cheapest [Hetzner](https://www.hetzner.com) cloud instance.
+Source code of my blog. It runs on smallest [Hetzner](https://www.hetzner.com) cloud instance.
 
 ## Installation
 
