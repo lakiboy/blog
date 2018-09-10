@@ -5,6 +5,7 @@
         "psr-4": { "App\\": "src/" }
     },
     "require": {
+        "php": "^7.1",
         "sculpin/sculpin": "3.0.*@dev"
     },
     "require-dev": {

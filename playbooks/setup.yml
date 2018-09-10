@@ -1,0 +1,21 @@
+---
+- hosts: all
+  remote_user: root
+
+  gather_facts: false
+  pre_tasks:
+    - name: Install Python for Ansible
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+      register: output
+      changed_when: output.stdout != ""
+
+    - name: Gather facts
+      setup: # aka gather_facts
+
+    - name: Install Python modules
+      apt: name="{{ item }}"
+      with_items:
+        - python-pip
+        - python-passlib
+        - python-setuptools
+        # - python-simplejson
