@@ -27,3 +27,9 @@ Configure Let’s Encrypt:
 ```bash
 $ ansible-playbook -i playbooks/hosts playbooks/letsencrypt.yml
 ```
+
+Deploy:
+
+```bash
+$ ansible-playbook -i playbooks/hosts playbooks/deploy.yml
+```
