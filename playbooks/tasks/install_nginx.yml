@@ -1,7 +1,7 @@
 ---
 
 - name: Create project directory
-  file: state=directory name='/var/www/{{ project_name }}/current' owner='{{ user_app }}' group='{{ user_app_group }}'
+  file: state=directory name='/var/www/{{ project_name }}/current/output_prod' owner='{{ user_app }}' group='{{ user_app_group }}'
 
 - name: Install nginx
   include_role: name=jdauphant.nginx

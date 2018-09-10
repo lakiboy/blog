@@ -33,3 +33,11 @@ Browse the site:
 ```bash
 $ open http://dmitri.docker
 ```
+
+## Deploy
+
+Build website:
+
+```bash
+$ docker-compose run php composer build
+```

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: app
+
+  roles:
+    - ansistrano.deploy
+
+  vars_files:
+    - vars/project.yml
+
+  vars:
+    ansistrano_deploy_from:   '{{ playbook_dir }}/../output_prod'
+    ansistrano_deploy_to:     '/var/www/{{ project_name }}'
+    ansistrano_keep_releases: 15
+    ansistrano_deploy_via:    copy
