@@ -1,0 +1,17 @@
+---
+
+certbot_admin_email:         d@dmitri.io
+certbot_create_if_missing:   true
+certbot_install_from_source: true
+certbot_auto_renew_options:  "--quiet --no-self-upgrade --pre-hook 'systemctl stop nginx' --post-hook 'systemctl start nginx'"
+certbot_certs:
+  - domains:
+      - dmitri.io
+      - blog.dmitri.io
+      - www.dmitri.io
+      - dmitrijs.io
+      - blog.dmitrijs.io
+      - www.dmitrijs.io
+
+ssl_certs_cert_path:    '/etc/letsencrypt/live/{{ fqdn }}/fullchain.pem'
+ssl_certs_privkey_path: '/etc/letsencrypt/live/{{ fqdn }}/privkey.pem'

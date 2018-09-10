@@ -1,0 +1,21 @@
+---
+
+- name: Create group for app user
+  group: name='{{ user_app_group }}'
+
+- name: Create app user
+  user: name='{{ user_app }}' shell=/bin/bash group='{{ user_app_group }}' generate_ssh_key=true
+
+- name: Authorize host user to login as app user
+  authorized_key: user='{{ user_app }}' key="{{ lookup('file', lookup('env', 'HOME') + '/.ssh/id_rsa.pub') }}" state=present
+
+- name: Add app user to sudoers
+  include_role: name=wtcross.sudoers
+  vars:
+    sudoer_specs:
+      - name: '{{ user_app }}'
+        users: '{{ user_app }}'
+        hosts: ALL
+        commands: ALL
+        operators: ALL
+        tags: NOPASSWD

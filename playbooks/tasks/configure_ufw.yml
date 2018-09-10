@@ -1,0 +1,17 @@
+---
+
+- name: Firewall | Default policy for all incoming connections
+  ufw: direction=incoming policy=deny
+
+- name: Firewall | Default policy for all outgoing connections
+  ufw: direction=outgoing policy=allow
+
+- name: Firewall | Allow basic TCP services
+  ufw: rule=allow proto=tcp port='{{ item }}'
+  with_items:
+    - ssh
+    - 80
+    - 443
+
+- name: Firewall | Enable
+  ufw: state=enabled

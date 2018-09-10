@@ -1,0 +1,40 @@
+---
+
+nginx_events_params:
+  - worker_connections 1024
+  - multi_accept       on
+
+nginx_configs:
+  gzip:
+    - gzip         on
+    - gzip_disable msie6
+  proxy:
+    - proxy_buffer_size       128k
+    - proxy_buffers           4 256k
+    - proxy_busy_buffers_size 256k
+  ssl:
+    - "ssl_certificate_key {{ ssl_certs_privkey_path }}"
+    - "ssl_certificate     {{ ssl_certs_cert_path }}"
+
+nginx_sites:
+  default:
+    - "server_name {{ fqdn }}"
+    - "listen      80"
+    - |
+      location /.well-known/ {
+          root /var/www/{{ project_name }}/current/.well-known/;
+      }
+
+      location / {
+          return 301 https://$server_name$request_uri;
+      }
+  blog-alias:
+    - "server_name www.{{ fqdn }} blog.{{ fqdn }}"
+    - "listen      443 ssl"
+    - "return      301 https://{{ fqdn }}$request_uri"
+  blog:
+    - "server_name {{ fqdn }}"
+    - "root        /var/www/{{ project_name }}/current"
+    - "listen      443 ssl"
+    - "index       index.html"
+    - "error_page  404 /404.html"

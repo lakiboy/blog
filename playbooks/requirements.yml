@@ -1,0 +1,15 @@
+---
+
+- src: damax.datetime
+
+- src: geerlingguy.ntp
+- src: geerlingguy.certbot
+
+- src: jdauphant.ssl-certs
+- src: jdauphant.nginx
+
+- src: ansistrano.deploy
+- src: ansistrano.rollback
+
+- src: holms.fqdn
+- src: wtcross.sudoers

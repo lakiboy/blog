@@ -1,0 +1,10 @@
+---
+
+ssl_certs_country:      LV
+ssl_certs_locality:     Riga
+ssl_certs_organization: Devmachine
+ssl_certs_state:        Riga
+ssl_certs_common_name:  '{{ fqdn }}'
+ssl_certs_path:         /etc/nginx/certs
+ssl_certs_cert_path:    '{{ ssl_certs_path }}/{{ ssl_certs_common_name }}.crt'
+ssl_certs_privkey_path: '{{ ssl_certs_path }}/{{ ssl_certs_common_name }}.key'

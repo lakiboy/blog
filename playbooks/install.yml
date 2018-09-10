@@ -1,0 +1,33 @@
+---
+
+- hosts: all
+  remote_user: root
+
+  tasks:
+    - name: Include certs variables
+      include_vars: file=vars/certs.yml
+      when: ssl_certs is defined
+
+    - name: Include certbot variables
+      include_vars: file=vars/certbot.yml
+      when: ssl_certs is not defined
+
+    - include_role: name=jdauphant.ssl-certs
+      when: ssl_certs is defined
+
+    - import_tasks: tasks/create_user.yml
+    - import_tasks: tasks/install_nginx.yml
+    - import_tasks: tasks/configure_ufw.yml
+
+    - include_role: name=holms.fqdn
+    - include_role: name=damax.datetime
+
+  vars_files:
+    - vars/project.yml
+    - vars/user.yml
+    - vars/datetime.yml
+    - vars/nginx.yml
+
+  vars:
+    sudoer_remove_unauthorized_specs: false
+    sudoer_rewrite_sudoers_file:      false

@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  remote_user: root
+
+  tasks:
+    - import_tasks: tasks/install_nginx.yml
+
+    - include_role: name=geerlingguy.certbot
+
+  vars_files:
+    - vars/project.yml
+    - vars/user.yml
+    - vars/nginx.yml
+    - vars/certbot.yml
