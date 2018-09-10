@@ -21,5 +21,5 @@ Social links:
 
 You can write me an email at <a href="{{ site.email | obfuscate(true) }}">{{ site.email | obfuscate }}</a>.
 
-This blog is built with [Sculpin](https://sculpin.io) with theme ported from [Hugo](https://gohugo.io) [XMin](https://xmin.yihui.name).
+This blog is built with [Sculpin](https://sculpin.io) with [XMin](https://xmin.yihui.name) theme ported from [Hugo](https://gohugo.io).
 The source files are available on [Github](https://github.com/lakiboy/blog).

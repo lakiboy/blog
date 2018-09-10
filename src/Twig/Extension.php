@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace App\Twig;
 
-use Twig_Extension;
-use Twig_Filter;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-final class Extension extends Twig_Extension
+final class Extension extends AbstractExtension
 {
     public function getFilters(): array
     {
         return [
-            new Twig_Filter('obfuscate', [$this, 'obfuscate'], ['is_safe' => ['html' => true]]),
+            new TwigFilter('obfuscate', [$this, 'obfuscate'], ['is_safe' => ['html' => true]]),
         ];
     }
 

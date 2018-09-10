@@ -6,10 +6,10 @@ url: 'https://dmitri.io'
 twitter: '@lakiboy'
 
 nav:
-    - { url: '/', title: 'Home' }
+    - { url: '/', title: 'Home', priority: '0.8', changefreq: daily }
     - { url: '/tags', title: 'Tags', priority: '1.0' }
-    - { url: '/categories', title: 'Categories', priority: '1.0' }
-    - { url: '/about', title: 'About', priority: '1.0' }
+    - { url: '/categories', title: 'Categories', priority: '1.0', changefreq: weekly }
+    - { url: '/about', title: 'About', priority: '1.0', changefreq: weekly }
     - { url: '/atom.xml', title: 'Subscribe' }
 
 link:
