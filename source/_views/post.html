@@ -4,11 +4,6 @@
     <link href="/highlight.css" rel="stylesheet" type="text/css">
 {% endblock %}
 
-{% block javascripts %}
-    <script src="/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-{% endblock %}
-
 {% block content_wrapper %}
     <div class="article-meta">
         <h1><span class="title">{{ page.title }}</span></h1>
@@ -48,5 +43,29 @@
                 <em>Previous</em>: <a href="{{ page.previous_post.url }}">{{ page.previous_post.title }}</a>
             {% endif %}
         </p>
+    {% endif %}
+
+    {% if site.env == 'prod' %}
+        <div id="disqus_thread"></div>
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    {% if site.env == 'prod' %}
+        <script>
+            var disqus_config = function () {
+                this.page.url = '{{ site.url ~ page.url }}';
+            };
+
+            (function () {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
     {% endif %}
 {% endblock %}

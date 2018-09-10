@@ -19,5 +19,5 @@ link:
     twitter:  'https://twitter.com/lakiboy'
     linkedin: 'https://www.linkedin.com/in/lakiboy'
 
-#disqus:
-#    shortname:
+disqus:
+    shortname: 'dmitri-io'
