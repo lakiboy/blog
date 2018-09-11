@@ -40,6 +40,6 @@ to generate few tags, categories, etc. Consider this a test entry with some thou
 
 ## Contribute
 
-As you probably noticed by now, I'm not a native English speaker. If you spot some typo, weird word order or just some
+As you probably noticed by now, I'm not a native English speaker. If you spot a typo, weird word order or just some
 nonsense, feel free to make a [pull request](https://github.com/lakiboy/blog/fork)
 and help me to improve [this article](https://github.com/lakiboy/blog/blob/master/source/_posts/2018-09-10-hello-world.md).
