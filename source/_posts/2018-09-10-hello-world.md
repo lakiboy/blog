@@ -16,7 +16,7 @@ Soon enough I completed a freelance contract and earned my first $100.
 The customer actually gave me a banknote with Benjamin Franklin instead of corresponding amount in _LVL_.
 The project was simple - it consisted of raw _HTML_ files and a single _PHP_ function - _mail_.
 
-Next I realized that cutting a _PDF_ file in pieces and produce _HTML_ out of it, adding behaviour to the page with _Javascript_ -
+Next I realized that cutting a _PSD_ file in pieces and produce _HTML_ out of it, adding behaviour to the page with _Javascript_ -
 this is what I enjoy more, than moving pixels in _Photoshop_ here and there. This was not a surprise as I was already
 comfortable with _Pascal_, which was the main language in early years of my University studies.
 
