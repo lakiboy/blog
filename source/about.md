@@ -4,7 +4,7 @@ header: true
 title: About me
 ---
 
-<img class="avatar" src="/images/avatar.jpg" alt="{{ site.author }}">
+<img class="image" src="/images/avatar.jpg" alt="{{ site.author }}">
 
 My name is **Dmitri** (_Latvian_: Dmitrijs Lakačauskis) and I live in Riga the capital of [Latvia](https://en.wikipedia.org/wiki/Latvia).
 

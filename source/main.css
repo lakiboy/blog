@@ -70,7 +70,7 @@ th, td {
 tfoot, tr:nth-child(even) {
   background: #eee; }
 
-.avatar {
+.image {
   float: left;
   margin: 0 15px 5px 0;
   max-width: 25%;
